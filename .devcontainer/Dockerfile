@@ -2,7 +2,7 @@ FROM ubuntu:focal
 
 # Setup important stuff
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends curl git gcc gpg ca-certificates
+    && apt-get -y install --no-install-recommends curl git gcc gpg ca-certificates build-essential
 
 # Setup starship
 RUN curl https://starship.rs/install.sh --output /starship_install.sh; chmod +x /starship_install.sh
